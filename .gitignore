@@ -1,3 +1,4 @@
 *.c
 *.h
 *.ttf
+!Example/
