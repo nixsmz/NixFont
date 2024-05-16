@@ -1,4 +1,3 @@
-*.c
-*.h
-*.ttf
-!Example/
+/*.c
+/*.h
+/*.ttf
