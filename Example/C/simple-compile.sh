@@ -1,1 +1,1 @@
-gcc main.c ../Output/font_bahnschrift_18.c -static
+gcc main.c ../Output/*.c -static

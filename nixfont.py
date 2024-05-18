@@ -29,6 +29,7 @@ def get_glyph(text: str, font: ImageFont.FreeTypeFont) -> dict:
         stats["bitmap"] = None
     return stats
 
+# Main program
 try:
     font_size = int(sys.argv[2])
     font_file = sys.argv[1]
@@ -82,6 +83,8 @@ with open(f"{font_name}.h", "w+") as output_h:
     output_h.write(f'#define _NIXFONT_{font_name.upper()}_H_\n\n')
     output_h.write('// Libraries\n#include <stdint.h>\n\n')
     output_h.write('// Structures\n' +
+                   '#ifndef _NIXFONT_STRUCTURES_\n' +
+                   '#define _NIXFONT_STRUCTURES_\n' +
                    'typedef struct {\n' +
                    '\tuint32_t offset_x;\n' +
                    '\tuint32_t offset_y;\n' +
@@ -93,7 +96,9 @@ with open(f"{font_name}.h", "w+") as output_h:
                    '\tuint32_t height;\n' +
                    '\tuint32_t count;\n' +
                    '\tconst nixfont_glyph_t **glyphs;\n' +
-                   '} nixfont_font_t;\n\n')
+                   '} nixfont_font_t;\n' +
+                   '#endif\n\n'
+    )
     output_h.write(f'// Font\n')
     output_h.write(f'extern const nixfont_font_t {font_name};\n\n')
     output_h.write(f'#endif\n')

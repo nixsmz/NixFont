@@ -1,4 +1,5 @@
 #include "../Output/font_bahnschrift_18.h"
+#include "../Output/font_bahnschrift_14.h"
 
 #include <stdint.h>
 #include <stdio.h>
@@ -23,6 +24,6 @@ static void print_string(const nixfont_font_t *font, const char *string) {
 }
 
 int main() {
-    print_string(&font_bahnschrift_18, "nixfont is nice !");
+    print_string(&font_bahnschrift_14, "nixfont is nice !");
     return 0;
 }

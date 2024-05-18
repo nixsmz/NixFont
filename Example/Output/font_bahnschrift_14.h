@@ -1,5 +1,5 @@
-#ifndef _NIXFONT_FONT_BAHNSCHRIFT_18_H_
-#define _NIXFONT_FONT_BAHNSCHRIFT_18_H_
+#ifndef _NIXFONT_FONT_BAHNSCHRIFT_14_H_
+#define _NIXFONT_FONT_BAHNSCHRIFT_14_H_
 
 // Libraries
 #include <stdint.h>
@@ -23,6 +23,6 @@ typedef struct {
 #endif
 
 // Font
-extern const nixfont_font_t font_bahnschrift_18;
+extern const nixfont_font_t font_bahnschrift_14;
 
 #endif
